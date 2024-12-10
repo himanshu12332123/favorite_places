@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:favorite_places/modals/place.dart';
+import 'package:favorite_places/screens/map.dart';
 import 'package:flutter/material.dart';
 import 'package:location/location.dart';
 import 'package:http/http.dart' as http;
@@ -84,6 +85,13 @@ setState(() {
 // print(locationData.latitude);
 widget.onSelectLocation(_pickedLocation!);
 
+  }
+
+  void _selectOnMap() {
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (ctx) => MapScreen(),
+      ),
+      );
   }
 
 @override
